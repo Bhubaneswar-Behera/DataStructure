@@ -17,8 +17,8 @@ package com.utils.array;
  */
 public class SumOfTwo {
     public static void main(String[] args) {
-        int[] inputNumberArray  = {2,7,11,15};
-        int target = 9;
+        int[] inputNumberArray  = {2,5,5,11};
+        int target = 10;
 
         int[] outputArray = twoSum(inputNumberArray,target);
 
@@ -29,7 +29,7 @@ public class SumOfTwo {
     private static int[] twoSum(int[] inputNumberArray, int target) {
 
         for (int i = 0 ; i < inputNumberArray.length ; i++) {
-            for (int j = 1 ; j < inputNumberArray.length ;j++) {
+            for (int j = i + 1 ; j < inputNumberArray.length ; j++) {
                 if(inputNumberArray[i] + inputNumberArray[j] == target){
                     return  new int[] {i,j};
                 }
