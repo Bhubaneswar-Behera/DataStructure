@@ -30,7 +30,7 @@ package com.utils.array;
 public class SearchInsertPosition {
     public static void main(String[] args) {
         int[] inputArray = {1,3,5,6};
-        int target = 5 ;
+        int target = 2 ;
 
         int result = searchInsert(inputArray,target);
         System.out.println("result : "+ result);
@@ -50,7 +50,6 @@ public class SearchInsertPosition {
             } else{
                 return mid;
             }
-
         }
         return i;
     }
