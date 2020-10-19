@@ -33,11 +33,11 @@ public class RotateArray {
 
         //iterate through the input array
         for(i = 0 ; i < inputArray.length -1 ; i++){
-            //Move and assign elements one position right
+            //Move all elements to one position right
             inputArray[i] = inputArray [i+1];
         }
 
-        //Shift the first element to last element
+        //place the first element at last position
         inputArray[i] = tempArray;
 
     }
