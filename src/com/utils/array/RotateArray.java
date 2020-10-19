@@ -1,7 +1,7 @@
 package com.utils.array;
 
 /**
- * This class is used to rotate an array of size n by d elements.
+ * This class is used to rotate an array of size n by d elements  to the right.
  *
  */
 
@@ -12,29 +12,32 @@ public class RotateArray {
         System.out.print("Before rotation : ");
         printArray(inputArray);
 
-        leftRotate(inputArray,2);
+        processArray(inputArray,2);
 
         System.out.println("\n");
         System.out.print("After rotation : ");
         printArray(inputArray);
     }
-    private static void leftRotate (int[] inputArray , int numberOfShifting){
+    private static void processArray (int[] inputArray , int numberOfShifting){
+        //this is used for number of shift needed
         for(int i = 0 ; i < numberOfShifting ; i++){
-            rotateLeft(inputArray);
+            rotateRight(inputArray);
         }
     }
 
-    private  static void rotateLeft(int[] inputArray){
+    private  static void rotateRight(int[] inputArray){
         int i , tempArray;
+
         //Assign the first element to a temporary
         tempArray = inputArray[0];
 
-        for(i=0 ; i < inputArray.length -1 ;i++){
-            //Move and assign elements one postion right
+        //iterate through the input array
+        for(i = 0 ; i < inputArray.length -1 ; i++){
+            //Move and assign elements one position right
             inputArray[i] = inputArray [i+1];
         }
 
-        //Shift the first element to  last element
+        //Shift the first element to last element
         inputArray[i] = tempArray;
 
     }
@@ -43,5 +46,4 @@ public class RotateArray {
             System.out.print(" " +a);
         }
     }
-
 }
