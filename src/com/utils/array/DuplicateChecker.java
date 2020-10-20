@@ -59,7 +59,6 @@ public class DuplicateChecker {
         Set<Integer> hashSet = new HashSet<>();
 
         for(int element : inputArray) {
-            //If
             if(hashSet.contains(element)){
                 return true;
             }
