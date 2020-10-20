@@ -28,7 +28,7 @@ package com.utils.array;
  */
 public class ArrayPlusOne {
     public static void main(String[] args) {
-    int[] inputArray = {9,9};
+    int[] inputArray = {1,2,3};
 
     int[] resultArray = plusOne(inputArray);
     printArray(resultArray);
