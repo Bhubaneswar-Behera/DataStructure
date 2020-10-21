@@ -27,7 +27,7 @@ package com.utils.strings;
 
 public class IntegerReverser {
     public static void main(String[] args) {
-        int input = -123;
+        int input = 123;
 
         System.out.println(reverseInt(input));
 
