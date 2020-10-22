@@ -17,21 +17,48 @@ package com.utils.strings;
 public class StringReverser {
     public static void main(String[] args) {
         String str = "hello";
-        reverseString(str.toCharArray());
+        reverseWithStringBuilderReverse(str);
+        reverseWithStringBuilderWithoutReverse(str);
+        reverse(str);
     }
 
-    private static  void reverseString(char[] charArray) {
-        int startIndex = 0;
-        int endIndex  = charArray.length -1 ;
+    private static void reverseWithStringBuilderReverse (String str) {
+        System.out.println( new StringBuilder(str).reverse().toString());
+    }
 
-        while(startIndex < endIndex) {
-            char temp  = charArray[startIndex];
-            charArray[startIndex] = charArray[endIndex];
-            charArray[endIndex] = temp;
-            startIndex ++;
-            endIndex--;
+    private static void reverseWithStringBuilderWithoutReverse (String str) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        char[] chars = str.toCharArray();
+
+        for(int i = str.length() -1 ; i >= 0 ; i --) {
+            stringBuilder.append(chars[i]);
         }
-        System.out.println(charArray);
-
+        System.out.println(stringBuilder.toString());
     }
+
+    private static void reverse(String str){
+        char[] chars = str.toCharArray();
+        int startIndex = 0;
+        int endIndex = str.length() - 1;
+
+        while(startIndex < endIndex){
+
+            //Put the first character in the temp
+            char temp = chars[startIndex];
+
+            //Put the last character in place of first
+            chars[startIndex] = chars[endIndex];
+
+            //put the temp in the last place now
+            chars[endIndex] = temp;
+
+            startIndex ++;
+            endIndex --;
+        }
+
+        System.out.println(chars);
+    }
+
+
 }
