@@ -1,6 +1,8 @@
 package com.utils.array;
 
 
+import java.util.Arrays;
+
 /**
  * Given a array ,insert an element into the array
  *
@@ -9,12 +11,12 @@ package com.utils.array;
 public class ArrayInsertion {
     public static void main(String[] args) {
         int inputArray[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        printArray(inputArray);
+        System.out.println(Arrays.toString(inputArray));
 
         int[] updatedArray = insertAt(inputArray , 11, 3);
-        System.out.println("\n");
-        printArray(updatedArray);
-        System.out.println("\n"+updatedArray.length);
+
+        System.out.println("After Inserting" + "\n" +Arrays.toString(inputArray) + "\n" + "Size of the array is : "+updatedArray.length);
+
     }
 
 
@@ -39,10 +41,5 @@ public class ArrayInsertion {
         }
     }
 
-    private static void populateArray(int[] inputArray){
-        inputArray[0] = 1;
-        inputArray[1] = 2;
-        inputArray[2] = 3;
-        inputArray[3] = 4;
-    }
+
 }
