@@ -84,6 +84,37 @@ public class LinkedList {
             //Make the temporary node point to the new node
             tempNode.next  = node;
         }
+    }
+
+    /**
+     * This methods is used to delete an element from a specific index
+     *
+     * @param index
+     */
+    public void deleteAt(int index){
+        //If we want to delete the first element
+        if(index == 0){
+            //Make head points to the next element
+            head = head.next;
+        } else {
+            //Create a temporal node for traversal
+            Node tempNode = head;
+            //Create a temporary node which will be dleted
+            Node toBeDeletedNode = null;
+
+            for(int i = 0 ; i < index -1 ; i++){
+                tempNode = tempNode.next;
+            }
+            //Assign the node which will be deleted to be deleted to the toBeDeletedNode
+            toBeDeletedNode = tempNode.next;
+
+            //Assign the temporary node to the next of the toBeDeletedNode
+            tempNode.next = toBeDeletedNode.next;
+
+            //Delete the object
+            toBeDeletedNode = null;
+
+        }
 
     }
 
@@ -93,9 +124,9 @@ public class LinkedList {
 
         //Traverse from the first node i.e from Head node.
         while (node.next != null){
-            System.out.println(node.data);
+            System.out.print(" "+ node.data);
             node = node.next;
         }
-        System.out.println(node.data);
+        System.out.print(" " + node.data);
     }
 }
