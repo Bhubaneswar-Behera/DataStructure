@@ -36,6 +36,24 @@ public class LinkedList {
         }
     }
 
+    /**
+     * This method is used to insert the data at the beginning.
+     *
+     * @param data
+     */
+    public void insertAtStart(int data){
+        //Create a new node
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        //Make the new node to point to the existing head
+        node.next = head;
+
+        //Make the new node as head i.e. first element in the LinkedList
+        head = node;
+    }
+
     public void show() {
         // Assign the temporary node to the the first node i.e the head
         Node node = head;
