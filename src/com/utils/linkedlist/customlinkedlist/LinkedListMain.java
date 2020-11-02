@@ -5,7 +5,7 @@ public class LinkedListMain {
         LinkedList linkedList = new LinkedList();
 
         //insert at end
-        System.out.println("Starting data at the end");
+        System.out.println("Insertin data at the end");
         linkedList.insertAtEnd(5);
         linkedList.insertAtEnd(7);
         linkedList.insertAtEnd(12);
@@ -14,10 +14,17 @@ public class LinkedListMain {
         linkedList.show();
 
         ////insert at start
-        System.out.println("Starting data at the start");
-       linkedList.insertAtStart(18);
+        System.out.println("Inserting data at the start");
+        linkedList.insertAtStart(18);
         //display the contents
         linkedList.show();
+
+        //insert at specific index
+        System.out.println("Inserting data at a specific index");
+        linkedList.insertAt(2,85);
+        //display the contents
+        linkedList.show();
+
     }
 
 }

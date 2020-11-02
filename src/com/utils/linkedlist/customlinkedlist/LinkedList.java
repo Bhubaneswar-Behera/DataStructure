@@ -54,6 +54,39 @@ public class LinkedList {
         head = node;
     }
 
+    /**
+     * This methods is used to insert the given element at a specific index.
+     *
+     * @param index
+     * @param data
+     */
+    public void insertAt(int index , int data){
+        //Create a new node
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+
+        //If we want to insert at the beginning of the LinkedList
+        if(index == 0){
+            insertAtStart(data);
+        } else {
+            //Assign head node to a temporary node for traversal
+            Node tempNode = head;
+
+            //For example if we want to insert at index 3 then we have to loop till the index 2
+            for(int i = 0 ; i < index -1 ; i++){
+                tempNode = tempNode.next;
+            }
+
+            //The new node will point to the next node of the temporary
+            node.next = tempNode.next;
+            //Make the temporary node point to the new node
+            tempNode.next  = node;
+        }
+
+    }
+
     public void show() {
         // Assign the temporary node to the the first node i.e the head
         Node node = head;
