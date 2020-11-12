@@ -22,6 +22,10 @@ public class Stack {
      * @param data
      */
     public void push(int data){
+        if(top == stack.length){
+            System.out.println("Stack is fill");
+            return;
+        }
         stack[top] = data;
         top++;
     }
@@ -32,10 +36,15 @@ public class Stack {
      * @return
      */
     public int pop(){
-        int data ;
-        top--;
-        data = stack[top];
-        stack[top] = 0;
+        int data = 0 ;
+        if(top <= 0){
+            System.out.println("Stack is empty");
+
+        } else {
+            top--;
+            data = stack[top];
+            stack[top] = 0;
+        }
         return data;
     }
 
