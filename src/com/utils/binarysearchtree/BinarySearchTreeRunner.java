@@ -2,7 +2,7 @@ package com.utils.binarysearchtree;
 
 
 /**
- * Runner class for Binary Search Tree insertion
+ * Runner class for Binary Search Tree operations
  *
  */
 public class BinarySearchTreeRunner {
