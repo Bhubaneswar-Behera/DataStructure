@@ -2,8 +2,12 @@ package com.utils.binarysearchtree;
 
 
 /**
- * Class to create Binary Search Tree and display the elements in
- * InOder , PreOder and PostOrder way
+ * BST Operations :
+ *
+ * 1. Create and  Insert into Binary Search Tree
+ * 2. Delete from Binary Search Tree
+ * 3. Display the elements in InOder , PreOder and PostOrder way
+ * 
  *
  */
 public class BinarySearchTree {
